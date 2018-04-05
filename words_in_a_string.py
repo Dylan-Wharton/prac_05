@@ -12,12 +12,9 @@ for word in string_list:
         word_list.append(word)
 
 tally = 0
-for something in word_list:
+for i in word_list:
     string_dict[word_list[tally]] = count_list[tally]
     tally += 1
 
 for i in string_dict:
-    print("{} : {}".format(i, string_dict[i]))
-
-
-"""Didnt know how to do word length alignment"""
+    print("{:{}} = {}".format(i, len(max(word_list, key=len)), string_dict[i]))
